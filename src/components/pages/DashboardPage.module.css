@@ -1,0 +1,133 @@
+.page { padding: 3rem 0 5rem; }
+
+.welcome {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+  align-items: flex-start;
+}
+@media (min-width: 640px) {
+  .welcome { flex-direction: row; align-items: flex-end; justify-content: space-between; }
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--color-accent);
+  margin-bottom: 0.25rem;
+}
+.title { font-size: clamp(1.5rem, 4vw, 2rem); margin-bottom: 0.25rem; }
+.sub   { font-size: 0.85rem; color: var(--color-text-muted); }
+
+.browseBtn {
+  padding: 0.6rem 1.25rem;
+  background: var(--color-accent);
+  color: #000;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: 0.875rem;
+  transition: opacity 0.2s;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.browseBtn:hover { opacity: 0.9; }
+
+/* Stats */
+.statsStrip {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(160px, 100%), 1fr));
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+.statCard {
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.statValue {
+  font-family: var(--font-mono);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+.statLabel { font-size: 0.8rem; color: var(--color-text-muted); }
+
+/* Sections */
+.section { margin-bottom: 3.5rem; }
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.25rem;
+  gap: 1rem;
+}
+.sectionTitle {
+  font-size: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+.sectionHeader .sectionTitle { margin-bottom: 0; }
+
+.seeAll {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  padding: 0.35rem 0.75rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  transition: all 0.2s;
+}
+.seeAll:hover { color: var(--color-accent); border-color: rgba(245,166,35,0.3); }
+
+/* Booking list */
+.bookingList { display: flex; flex-direction: column; gap: 1rem; }
+.bookingCard { padding: 1.5rem; display: flex; flex-direction: column; gap: 0.75rem; }
+.bookingHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.bookingHeader > div { display: flex; gap: 0.35rem; flex-wrap: wrap; }
+.bookingTitle { font-size: 1.05rem; }
+.bookingMeta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.5rem;
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+.bookingFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--color-border);
+}
+.refCode {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--color-accent);
+}
+.bookedOn { font-size: 0.75rem; color: var(--color-text-dim); }
+
+/* Recommended cards */
+.recCard { padding: 1.25rem; display: flex; flex-direction: column; gap: 0.75rem; }
+.recTags { display: flex; gap: 0.35rem; flex-wrap: wrap; }
+.recTitle { font-size: 0.95rem; line-height: 1.35; }
+.recDesc  { font-size: 0.8rem; color: var(--color-text-muted); line-height: 1.55; }
+.recMeta  { display: flex; gap: 0.75rem; font-size: 0.78rem; color: var(--color-text-muted); }
+.recFooter { margin-top: auto; }
+.recBook {
+  font-size: 0.85rem;
+  color: var(--color-accent);
+  font-weight: 600;
+  transition: opacity 0.2s;
+}
+.recBook:hover { opacity: 0.8; }
+
+/* Empty */
+.empty { display: flex; flex-direction: column; gap: 0.75rem; align-items: flex-start; padding: 2rem; background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-md); }
+.empty p { font-size: 0.9rem; }
+.emptyLink { color: var(--color-accent); font-size: 0.875rem; font-weight: 500; }

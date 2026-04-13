@@ -1,0 +1,267 @@
+.page { overflow-x: hidden; }
+
+/* ─── HERO ─── */
+.hero {
+  position: relative;
+  padding: 5rem 0 4rem;
+  overflow: hidden;
+}
+@media (min-width: 768px) { .hero { padding: 7rem 0 5rem; } }
+
+.heroBg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+.gridLines {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+.glow1 {
+  position: absolute;
+  top: -120px; left: -80px;
+  width: 480px; height: 480px;
+  background: radial-gradient(circle, rgba(245,166,35,0.12) 0%, transparent 70%);
+  border-radius: 50%;
+}
+.glow2 {
+  position: absolute;
+  bottom: -80px; right: -100px;
+  width: 400px; height: 400px;
+  background: radial-gradient(circle, rgba(56,189,248,0.08) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  max-width: 780px;
+}
+
+.heroBadge { display: flex; }
+
+.heroTitle {
+  color: var(--color-text);
+  letter-spacing: -0.02em;
+}
+.heroAccent {
+  color: var(--color-accent);
+  position: relative;
+}
+
+.heroSubtitle {
+  font-size: clamp(1rem, 2.5vw, 1.15rem);
+  line-height: 1.7;
+  color: var(--color-text-muted);
+  max-width: 560px;
+}
+
+.heroCTA {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.ctaPrimary {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.75rem 1.6rem;
+  background: var(--color-accent);
+  color: #000;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  font-size: 0.95rem;
+  transition: opacity 0.2s, transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 20px rgba(245,166,35,0.3);
+}
+.ctaPrimary:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(245,166,35,0.4);
+}
+
+.ctaSecondary {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.75rem 1.4rem;
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  font-weight: 500;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  transition: color 0.2s, border-color 0.2s, background 0.2s;
+}
+.ctaSecondary:hover {
+  color: var(--color-text);
+  border-color: rgba(255,255,255,0.2);
+  background: rgba(255,255,255,0.03);
+}
+
+.heroStats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem 2.5rem;
+  margin-top: 1rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--color-border);
+}
+.heroStat { display: flex; flex-direction: column; gap: 0.2rem; }
+.heroStatValue {
+  font-family: var(--font-mono);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+.heroStatLabel {
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+}
+
+/* ─── SECTION HEADERS ─── */
+.sectionHead {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+.sectionEyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--color-accent);
+  letter-spacing: 0.05em;
+  margin-bottom: 0.35rem;
+}
+.seeAll {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  padding: 0.4rem 0.9rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+.seeAll:hover { color: var(--color-accent); border-color: rgba(245,166,35,0.3); }
+
+/* ─── WORKSHOPS ─── */
+.workshopsSection { background: transparent; }
+
+/* ─── CATEGORIES ─── */
+.categoriesSection {
+  padding: 2.5rem 0;
+  background: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+.categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+.categoryChip {
+  padding: 0.4rem 1rem;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-family: var(--font-mono);
+  color: var(--color-text-muted);
+  transition: all 0.2s;
+}
+.categoryChip:hover {
+  background: rgba(245,166,35,0.1);
+  border-color: rgba(245,166,35,0.3);
+  color: var(--color-accent);
+}
+
+/* ─── HOW IT WORKS ─── */
+.steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(220px, 100%), 1fr));
+  gap: 1.25rem;
+  margin-top: 0.5rem;
+}
+.step { padding: 1.75rem 1.5rem; }
+.stepNum {
+  font-family: var(--font-mono);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  opacity: 0.5;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+.stepTitle { margin-bottom: 0.5rem; }
+.stepDesc { font-size: 0.875rem; }
+
+/* ─── TESTIMONIALS ─── */
+.testimonialsSection { background: var(--color-surface); border-top: 1px solid var(--color-border); }
+.testimonials {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(280px, 100%), 1fr));
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+.testimonial { padding: 1.75rem; }
+.testimonialText {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: var(--color-text);
+  font-style: italic;
+  margin-bottom: 1.25rem;
+}
+.testimonialFooter {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.testimonialAvatar {
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  color: #000;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700; font-size: 1rem; font-family: var(--font-mono);
+  flex-shrink: 0;
+}
+.testimonialName {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 0.875rem;
+  display: block;
+}
+.testimonialMeta { font-size: 0.75rem; color: var(--color-text-dim); }
+
+/* ─── CTA BANNER ─── */
+.ctaBanner {
+  padding: 4rem 0;
+  background: linear-gradient(135deg, rgba(245,166,35,0.08) 0%, rgba(56,189,248,0.05) 100%);
+  border-top: 1px solid var(--color-border);
+}
+.bannerInner {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: flex-start;
+}
+@media (min-width: 768px) {
+  .bannerInner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+.bannerTitle { font-size: clamp(1.4rem, 3vw, 2rem); margin-bottom: 0.5rem; }
+.bannerSub   { font-size: 0.9rem; }
+.bannerActions { display: flex; flex-wrap: wrap; gap: 0.75rem; flex-shrink: 0; }
