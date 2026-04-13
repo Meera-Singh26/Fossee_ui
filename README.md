@@ -103,7 +103,7 @@ Complex flows (like booking) are broken into steps. The multi-step booking form 
 
 ---
 
-## 📱 Responsiveness Strategy
+##  Responsiveness Strategy
 
 The entire design is **mobile-first** — base styles target small screens, `@media (min-width: ...)` queries add desktop enhancements.
 
@@ -170,7 +170,6 @@ The challenges were:
 - Route-based code splitting for fast initial load
 - SEO meta tags, Open Graph, and Twitter Card support
 
-> _Screenshots would be added here during submission with actual browser captures_
 
 ---
 
